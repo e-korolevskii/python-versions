@@ -52,6 +52,8 @@ standard_library = [
     'doctest',
     'dummy_threading',
     'email',
+    'editline',
+    'edit',
     'encodings',
     'filecmp',
     'fileinput',
