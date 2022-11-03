@@ -21,7 +21,7 @@ ld_library_name = sysconfig.get_config_var('LDLIBRARY')
 
 is_shared = sysconfig.get_config_var('Py_ENABLE_SHARED')
 have_libreadline = sysconfig.get_config_var("HAVE_LIBREADLINE")
-have_libeditline = sysconfig.get_config_var("WITH_EDITLINE")
+have_libreadline2 = sysconfig.get_config_var("HAVE_READLINE_READLINE_H")
 
 ### Define expected variables
 if os_type == 'Linux': expected_ld_library_extension = 'so'
@@ -81,8 +81,5 @@ if os_type == 'Darwin':
 ### Validate libreadline
 if not have_libreadline:
     print('Missing libreadline')
-    if not have_libeditline:
-        print('Missing editline')
-        exit(1)
-    else: 
-        print('Have editline')
+    print(have_libreadline2)
+    exit(1)
