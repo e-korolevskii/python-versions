@@ -78,6 +78,7 @@ if os_type == 'Darwin':
                 exit(1)
 
 ### Validate libreadline
+print(sys.version_info)
 if sys.version_info < (3, 12):
     if not have_libreadline:
         print('Missing libreadline')
